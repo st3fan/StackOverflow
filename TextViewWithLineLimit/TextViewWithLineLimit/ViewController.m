@@ -28,7 +28,7 @@
     
     NSUInteger numberOfLines = 0;
     for (NSUInteger i = 0; i < t.length; i++) {
-        if ([t characterAtIndex: i] == '\n') {
+        if ([[NSCharacterSet newlineCharacterSet] characterIsMember: [t characterAtIndex: i]]) {
             numberOfLines++;
         }
     }
